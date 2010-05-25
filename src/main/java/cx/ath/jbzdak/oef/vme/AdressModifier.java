@@ -1,0 +1,19 @@
+package cx.ath.jbzdak.oef.vme;
+
+/**
+ * User: Jacek Bzdak jbzdak@gmail.com
+ * Date: May 25, 2010
+ */
+public enum AdressModifier {
+   NO_MODIFIER(0);
+
+   private final int value;
+
+   AdressModifier(int value) {
+      this.value = value;
+   }
+
+   public int getValue() {
+      return value;
+   }
+}
