@@ -21,7 +21,7 @@ public enum ErrorCodes {
       }
    }
 
-   static ErrorCodes getCodeFromInt(int code){
+   public static ErrorCodes getCodeFromInt(int code){
       return errorsByCode[-code];
    }
 
@@ -40,5 +40,13 @@ public enum ErrorCodes {
 
    public String getDescription() {
       return description;
+   }
+
+   @Override
+   public String toString() {
+      return "ErrorCodes{" +
+              "code=" + code +
+              ", description='" + description + '\'' +
+              '}';
    }
 }

@@ -5,7 +5,12 @@ package cx.ath.jbzdak.oef.vme.caen;
  * Date: May 25, 2010
  */
 public enum AdressModifier {
-   NO_MODIFIER(0);
+   NO_MODIFIER(0),
+   /**
+    * cvA24_U_DATA
+    */
+   NO_PRIVILEGED_DATA_24(0x39);
+
 
    private final int value;
 

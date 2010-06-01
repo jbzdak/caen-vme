@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * User: Jacek Bzdak jbzdak@gmail.com
  * Date: May 25, 2010
  */
-public class CaenFunctionMapper implements FunctionMapper{
+class CaenFunctionMapper implements FunctionMapper{
 
    static final String FUNCTION_PREFIX = "CAENVME_";
 
