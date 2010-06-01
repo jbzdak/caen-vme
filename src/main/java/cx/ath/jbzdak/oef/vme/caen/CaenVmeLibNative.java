@@ -1,7 +1,6 @@
-package cx.ath.jbzdak.oef.vme;
+package cx.ath.jbzdak.oef.vme.caen;
 
 import com.sun.jna.*;
-import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 
 import java.util.HashMap;
@@ -25,9 +24,7 @@ public class CaenVmeLibNative {
    }
    /*
       #define CAENVME_API CVErrorCodes
-    */
-
-
+   */
 
    //public native String decodeError(int error);
 
@@ -46,17 +43,11 @@ public class CaenVmeLibNative {
 
    /*
    CAENVME_API
-CAENVME_ReadCycle(int32_t Handle, uint32_t Address, void *Data,
-                  CVAddressModifier AM, CVDataWidth DW);
+      CAENVME_ReadCycle(int32_t Handle, uint32_t Address, void *Data, CVAddressModifier AM, CVDataWidth DW);
     */
 
    public native int ReadCycle(Pointer handle, int address, byte[] data, int addressModifier, int dataWidth); 
 
    public native int End(Pointer handle); 
 
-
-   
-
-   
-
-}
+}                                                        

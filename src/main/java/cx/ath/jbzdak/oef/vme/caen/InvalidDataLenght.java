@@ -1,4 +1,4 @@
-package cx.ath.jbzdak.oef.vme;
+package cx.ath.jbzdak.oef.vme.caen;
 
 /**
  * User: Jacek Bzdak jbzdak@gmail.com

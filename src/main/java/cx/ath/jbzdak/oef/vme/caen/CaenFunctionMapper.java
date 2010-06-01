@@ -1,4 +1,4 @@
-package cx.ath.jbzdak.oef.vme;
+package cx.ath.jbzdak.oef.vme.caen;
 
 import com.sun.jna.FunctionMapper;
 import com.sun.jna.NativeLibrary;

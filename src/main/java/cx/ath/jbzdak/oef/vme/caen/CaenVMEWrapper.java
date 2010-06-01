@@ -1,7 +1,9 @@
-package cx.ath.jbzdak.oef.vme;
+package cx.ath.jbzdak.oef.vme.caen;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
+
+import java.util.Arrays;
 
 /**
  * User: Jacek Bzdak jbzdak@gmail.com
@@ -38,14 +40,17 @@ public class CaenVMEWrapper {
       checkError(caenVmeLibNative.WriteCycle(handle, address, data, modifier.getValue(), getDataWidth(data)));
    }
 
+   public byte[] readWrite(int address, byte[] data, AdressModifier modifier){
+      byte[] result = Arrays.copyOf(data, data.length);
+      checkError(caenVmeLibNative.ReadCycle(handle, address, result, modifier.getValue(), getDataWidth(data)));
+      return result; 
+   }
+
    public byte[] read(int address, DataWidth dataWidth, AdressModifier modifier){
       byte[] results = new byte[dataWidth.getNumberOfBytes()];
       checkError(caenVmeLibNative.ReadCycle(handle, address, results, modifier.getValue(), dataWidth.getLen()));
       return results;
    }
-
-
-
 
    private void checkError(int errorCode){
       if(errorCode != 0){

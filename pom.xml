@@ -14,13 +14,18 @@
          <url>http://skimbleshanks.ath.cx/maven2/</url>
          <!-- Prywatne repozytorium autora -->
       </repository>
+        <repository>
+         <id>download-java-net</id>
+         <url>http://download.java.net/maven/2/</url>
+         <!-- Prywatne repozytorium autora -->
+      </repository>
    </repositories>
 
    <dependencies>
       <dependency>
          <groupId>net.java.dev.jna</groupId>
          <artifactId>jna</artifactId>
-         <version>3.2.3</version>
+         <version>3.2.5</version>
       </dependency>
    </dependencies>
 
