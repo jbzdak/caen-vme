@@ -5,22 +5,20 @@ package cx.ath.jbzdak.oef.vme.caen;
  * Date: May 25, 2010
  */
 public enum DataWidth {
-   BYTE(8),
-   TWO_BYTES(16),
-   FOUR_BYTES(32),
-   EIGHT_BYTES(64);
+   BYTE(1),
+   TWO_BYTES(2),
+   FOUR_BYTES(4),
+   EIGHT_BYTES(8);
 
    final int len;
 
-   final int numberOfBytes;
 
    DataWidth(int len) {
       this.len = len;
-      numberOfBytes = len/8;
    }
 
    public int getNumberOfBytes() {
-      return numberOfBytes;
+      return len;
    }
 
    public int getLen() {

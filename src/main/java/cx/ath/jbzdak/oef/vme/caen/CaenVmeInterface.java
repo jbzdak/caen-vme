@@ -34,5 +34,7 @@ public interface CaenVmeInterface extends Library{
 
    public int ReadCycle(int handle, int address, byte[] data, int addressModifier, int dataWidth);
 
+   public int ReadCycle(int handle, int address, IntByReference data, int addressModifier, int dataWidth);
+
    public int End(int handle); 
 }

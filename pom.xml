@@ -14,10 +14,14 @@
          <url>http://skimbleshanks.ath.cx/maven2/</url>
          <!-- Prywatne repozytorium autora -->
       </repository>
-        <repository>
+      <repository>
+         <id>skimble-archiva</id>
+         <url>http://skimbleshanks.ath.cx/archiva/repository/devs</url>
+         <!-- Prywatne repozytorium autora -->
+      </repository>
+      <repository>
          <id>download-java-net</id>
          <url>http://download.java.net/maven/2/</url>
-         <!-- Prywatne repozytorium autora -->
       </repository>
    </repositories>
 
@@ -27,6 +31,33 @@
          <artifactId>jna</artifactId>
          <version>3.2.5</version>
       </dependency>
+
+     <dependency>
+         <groupId>jfree</groupId>
+         <artifactId>jfreechart</artifactId>
+         <version>1.0.13</version>
+      </dependency>
+      <dependency>
+         <groupId>net.java.dev.beansbinding</groupId>
+         <artifactId>beansbinding</artifactId>
+         <version>1.2.1</version>
+      </dependency>
+
+   <dependency>
+       <groupId>com.miglayout</groupId>
+       <artifactId>miglayout</artifactId>
+       <version>3.7.3</version>
+   </dependency>   <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>1.5.6</version>
+      </dependency>
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-simple</artifactId>
+         <version>1.5.6</version>
+      </dependency>
+
    </dependencies>
 
 

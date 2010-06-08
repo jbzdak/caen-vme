@@ -30,7 +30,7 @@ public class CaenVMEWrapper {
       if((len & (len-1)) != 0){
          throw new InvalidDataLenght("Data length is not power of 2. It is '" + len + "'");
       }
-      return len*8;
+      return len;
    }
 
    public int getHandle() {
@@ -59,6 +59,12 @@ public class CaenVMEWrapper {
       byte[] result = Arrays.copyOf(data, data.length);
       checkError(caenVmeLibNative.ReadCycle(handle, address, result, modifier.getValue(), getDataWidth(data)));
       return result;
+   }
+
+   public int readInt(int address, AdressModifier modifier){
+      IntByReference result = new IntByReference();
+      checkError(caenVmeLibNative.ReadCycle(handle, address, result, modifier.getValue(), DataWidth.TWO_BYTES.getNumberOfBytes()));
+      return result.getValue();
    }
 
    public byte[] read(int address, DataWidth dataWidth, AdressModifier modifier){
